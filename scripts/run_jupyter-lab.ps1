@@ -1,13 +1,14 @@
-# "Template Repository for Research Papers with Python Code"
+# "SECAI Summer School"
 #
-#  Copyright (C) 2021 Peter Steiner
+# Copyright (C) 2023 Peter Steiner
 # License: BSD 3-Clause
 
-python.exe -m venv .virtualenv
+python.exe -m venv venv
 
-.\.virtualenv\Scripts\activate.ps1
+.\venv\Scripts\activate.ps1
 
 python.exe -m pip install -r requirements.txt
+python.exe -m pip install --editable .
 jupyter-lab.exe
 
 deactivate
