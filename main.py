@@ -1,5 +1,4 @@
 import argparse
-import os
 from pathlib import Path
 from sklearn.model_selection import RandomizedSearchCV, PredefinedSplit
 from sklearn.linear_model import RidgeClassifier
@@ -7,7 +6,7 @@ from sklearn.utils.fixes import loguniform
 import joblib
 import medmnist
 import numpy as np
-from medmnist import INFO, Evaluator
+from medmnist import INFO
 from medmnist.info import DEFAULT_ROOT
 
 
