@@ -1,3 +1,4 @@
-medmnist
+
 seaborn
 jupyter
+jupyterlab
