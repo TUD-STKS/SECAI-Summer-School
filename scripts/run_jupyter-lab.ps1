@@ -7,8 +7,9 @@ python.exe -m venv venv
 
 .\venv\Scripts\activate.ps1
 
-python.exe -m pip install -r requirements.txt
-python.exe -m pip install --editable .
+python.exe -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+python.exe -m pip install --upgrade .[notebook]
+
 jupyter-lab.exe
 
 deactivate
