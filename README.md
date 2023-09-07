@@ -30,7 +30,7 @@ during the workshop.
 The easiest way to get started is to either use Binder or Colab. Links to open the 
 Jupyter Notebook there are given below.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TUD-STKS/SECAI-Summer-School/blob/main/Example-Notebook.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TUD-STKS/SECAI-Summer-School/blob/main/IntroductionMachineLearning.ipynb)
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/TUD-STKS/SECAI-Summer-School/HEAD)
 
