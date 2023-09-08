@@ -4,6 +4,10 @@ import torch
 from itertools import pairwise
 
 
+cuda_available = torch.cuda.is_available()
+device = torch.device('cuda') if cuda_available else torch.device('cpu')
+
+
 class LinearRegression(nn.Module):
     """
     Linear regression model using PyTorch.
@@ -237,10 +241,12 @@ class LSTMModel(nn.Module):
         h0 = torch.zeros(
             self.num_layers * 2 if self.bidirectional else self.num_layers,
             x.shape[0], self.hidden_size).requires_grad_()
+        h0 = h0.to(device)
         # Initialize cell state
         c0 = torch.zeros(
             self.num_layers * 2 if self.bidirectional else self.num_layers,
             x.shape[0], self.hidden_size).requires_grad_()
+        c0 = c0.to(device)
         # 28 time steps
         # We need to detach as we are doing truncated
         # backpropagation through time. If we don't, we'll backprop all the way
