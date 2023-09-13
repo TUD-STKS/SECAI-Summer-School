@@ -381,11 +381,14 @@ print(f"{clf.score(X=X_train, y=y_train)}")
 print(f"{clf.score(X=X_test, y=y_test)}")
 
 train_loader = utils.data.DataLoader(dataset=train_dataset,
-                                     batch_size=BATCH_SIZE, shuffle=True)
+                                     batch_size=BATCH_SIZE, shuffle=True,
+                                     num_workers=2, pin_memory=True)
 validation_loader = utils.data.DataLoader(dataset=validation_dataset,
-                                          batch_size=BATCH_SIZE, shuffle=True)
+                                          batch_size=BATCH_SIZE, shuffle=True,
+                                          num_workers=2, pin_memory=True)
 test_loader = utils.data.DataLoader(dataset=test_dataset,
-                                    batch_size=BATCH_SIZE, shuffle=True)
+                                    batch_size=BATCH_SIZE, shuffle=True,
+                                    num_workers=2, pin_memory=True)
 
 model = LinearRegression(in_features=N_PIXELS, num_classes=N_CLASSES)
 model = model.to(DEVICE)
